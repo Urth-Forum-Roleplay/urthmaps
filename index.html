@@ -5,3 +5,78 @@
 <p>This page will be up and running shortly.</p>
 </body>
 </html>
+<script>
+	// global variables time
+	var sse = 0; // Seconds Since Eight
+	var tb = -1; // Time Balance
+	var tstate = 0; // current STATE of the timer. 0 = OFF, 1 = ON
+	var s = -50; //this has to be a global variable :sob:
+		function init1o1o(starthour) {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			s = today.getSeconds();
+			tb = - ((h-starthour)*3600 + m*60 + s - 1);
+			if (h < 8) {document.getElementById('timeleft').style = "z-index:1; margin-top:-69px; margin-right:11px; color:#aaf683; text-align:right; font-size:75pt; font-weight:700;";}
+			startTime();
+		}
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			if (today.getSeconds() - s == 2) {tb += ztm(tstate);} // corrects for only updating every like 1001ms
+			s = today.getSeconds();
+			sse = (h-8)*3600 + m*60 + s;
+			tb += ztm(tstate);
+			document.getElementById('timeleft').innerHTML = stt(tb);
+			h = checkTime(h);
+			m = checkTime(m);
+			s = checkTime(s);
+			// var datestring = today.getUTCFullYear() + "-" + checkTime(today.getUTCMonth() + 1) + "-" + checkTime(today.getUTCDate()) + " ";
+			document.getElementById('currenttime').innerHTML = h + ":" + m + ":" + s;
+			parityCheck();
+			var t = setTimeout(startTime, 1000);
+		}
+		function stt(i) { // turns i seconds into the time
+			var prty = "";
+			if (i == 0) {return "00:00:00";}
+			if (i > 0) {prty = "+";}
+			if (i < 0) {i = -i; prty = "−";}
+			var dh = checkTime(Math.floor(i/3600));
+			var dm = checkTime(Math.floor((i%3600)/60));
+			var ds = checkTime(Math.floor(i%60));
+			return prty + dh + ":" + dm + ":" + ds;
+		}
+		function ztm(j) { // turns 0 → -1
+			if (j == 0) {return -1;}
+			else {return j;}
+		}
+		function checkTime(k) {
+			if (k < 10) {k = "0" + k};  // add zero in front of numbers < 10
+			return k;
+		}
+		function parityCheck() {
+			if (tb == 1) {document.getElementById('timeleft').style = "z-index:1; margin-top:-69px; margin-right:11px; color:#aaf683; text-align:right; font-size:75pt; font-weight:700;";}
+			if (tb == 0) {document.getElementById('timeleft').style = "z-index:1; margin-top:-69px; margin-right:11px; color:#c0c0c0; text-align:right; font-size:75pt; font-weight:700;";}
+			if (tb == -1) {document.getElementById('timeleft').style = "z-index:1; margin-top:-69px; margin-right:11px; color:#a4243b; text-align:right; font-size:75pt; font-weight:700;";}
+		}
+		function toggle() {
+			if (tstate == 1) {
+				tstate = 0;
+				document.getElementById('togglebutton').src = "images/togon.png";
+				document.getElementById('statusbutton').src = "images/statoff.png";
+				console.log("1→0");
+			} else if (tstate == 0) {
+				tstate = 1;
+				document.getElementById('togglebutton').src = "images/togoff.png";
+				document.getElementById('statusbutton').src = "images/staton.png";
+				console.log("0→1");
+			}
+		}
+		function resetTb() {
+			tb = 0;
+			console.log("TB reset!");
+			document.getElementById('timeleft').innerHTML = stt(0);
+			parityCheck();
+		}
+	</script>
