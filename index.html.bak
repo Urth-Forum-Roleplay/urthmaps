@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Welcome to the turtlebyturtle homepage.</h1>
-<p>This page will be up and running shortly.</p>
-</body>
-</html>
-<script>
+<<<<<<< HEAD
+<head>
+	<title>1on1off</title>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+	<link rel="icon" href="1o1o.ico">
+	
+	<script>
 	// global variables time
 	var sse = 0; // Seconds Since Eight
 	var tb = -1; // Time Balance
@@ -80,3 +83,25 @@
 			parityCheck();
 		}
 	</script>
+</head>
+
+<body onload="init1o1o(8)"> <!-- Set this to the hour of the day you want to start the day at (8 → 8am)-->
+	<div class="containerdiv" style="position:absolute; font-family:Archivo; left:0px; top:0px; width:480px; height:320px;">
+		<img src="images/1o1obg.png" style="z-index:-1; position:absolute; left:0px; top:0px;"/>
+		<p id="currenttime" style="z-index:1; margin-top:7px; margin-right:64px; color:#ffffff; text-align:right; font-size:35pt; font-weight:700;">09:11:15</p>
+		<p id="timeleft" style="z-index:1; margin-top:-69px; margin-right:11px; color:#a4243b; text-align:right; font-size:75pt; font-weight:700;">100</p>
+		<img src="images/topmask1.png" style="z-index:5; position:absolute; left:0px; top:0px;"/>
+		<img id="togglebutton" src="images/togon.png" onclick="toggle()" style="z-index:11; position:absolute; left:292px; top:132px;" />
+		<img id="statusbutton" src="images/statoff.png" style="z-index:11; position:absolute; left:16px; top:132px;" />
+		<img id="resetbutton" src="images/resetbtn.png" ondblclick="resetTb()" style="z-index:11; position:absolute; left:252px; top:132px;" />
+	</div>
+
+</body>
+=======
+<html>
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages. When will this link work.</p>
+</body>
+</html>
+>>>>>>> parent of 30b9987 (Update index.html)
