@@ -1,9 +1,8 @@
 <!DOCTYPE html>
  <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-→ <a href="home/carto.html">Cartography Repository</a>
+<h1>Welcome</h1>
+<a href="home/carto.html">Cartography Repository</a>
 </body>
 </html>
 <head>
