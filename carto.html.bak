@@ -18,8 +18,20 @@ PLEASE NOTE: Your browser may warn you about the file being unsafe. This is due 
 Urth RP's main map. Showcases nations, cities, and subdivisions.<br>
 <img src="../cartography/Samples/STEP_MAIN.png" alt="Political wiki sample" style="width:386.4px;height:334.8px;">
 <br></br>
+<b>Supplemental</b> (<a href="../cartography/GIMP/Supplemental.xcf">XCF</a> - <a href="../cartography/Images/Supplemental.png">PNG</a>)<br>
+Includes one of the styles of wikimap and a blank map.<br>
+<img src="../cartography/Samples/SSupplemental.png" alt="Supplemental map sample" style="width:386.4px;height:334.8px;">
+<br></br>
 <b>Wiki Locator</b> (<a href="../cartography/GIMP/WikiLocator.xcf">XCF</a> - <a href="../cartography/Images/WikiLocator.png">PNG</a>)<br>
 Used for locator maps on TEPwiki, which are usually in a nation's infobox. The highlighted nation should use <samp>#c22335</samp>.<br>
 <img src="../cartography/Samples/SWikiLocator.png" alt="Wiki locator map sample" style="width:386.4px;height:334.8px;">
+<br></br>
+<b>Topography</b> (<a href="../cartography/Images/Topography.png">PNG</a>)<br>
+Topographic map of Urth.<br>
+<img src="../cartography/Samples/STopography.png" alt="Wiki locator map sample" style="width:386.4px;height:334.8px;">
+<br></br>
+<b>Climate</b> (<a href="../cartography/GIMP/Climate.xcf">XCF</a> - <a href="../cartography/Images/Climate.png">PNG</a>)<br>
+Urth's climate map. Uses the <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification">Köppen climate classification</a><br>
+<img src="../cartography/Samples/SClimate.png" alt="Wiki locator map sample" style="width:386.4px;height:334.8px;">
 </body>
 </html>
