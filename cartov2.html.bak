@@ -15,7 +15,7 @@
 		The Cartography Department recommends the use of <a href="https://www.gimp.org/">GIMP</a> to edit XCF files and <a href="https://inkscape.org/">Inkscape</a> to edit SVG files.<br>
 		<i>PLEASE NOTE: Your browser may warn you when downloading files from this website. This is due to the low volume of downloads and should not be cause for concern.</i>
 <br></br>
-<table>
+<table border="1">
 	<tr>
 		<th>MAP TYPE</th>
 		<th>DESCRIPTION</th>
@@ -25,7 +25,7 @@
 	<tr>
 		<td>Political</td>
 		<td>Urth RP's main map. Showcases nations, cities, and subdivisions.</td>
-		<td>(<a href="../cartography/GIMP/TEP_MAIN.xcf">XCF</a><br><a href="../cartography/Images/TEP_MAIN.png">PNG</a>)</td>
+		<td><a href="../cartography/GIMP/TEP_MAIN.xcf">XCF</a><br></br><a href="../cartography/Images/TEP_MAIN.png">PNG</a></td>
 		<td><img src="../cartography/Samples/STEP_MAIN.png" alt="Political map sample" style="width:386.4px;height:334.8px;"></td>
 	</tr>
 		<tr>
