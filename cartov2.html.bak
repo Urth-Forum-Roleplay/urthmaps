@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>Cartography Downloads</title>
+	<title>Cartography Downloads V2</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -8,6 +8,30 @@
 	<link rel="icon" href="favicon.ico">
 </head>
 <html>
+<table>
+	<tr>
+		<td>
+		H1
+		</td>
+		<td>
+		H2
+		</td>
+		<td>
+		H3
+		</td>
+	</tr>
+		<tr>
+		<td>
+		L1
+		</td>
+		<td>
+		L2
+		</td>
+		<td>
+		L3
+		</td>
+	</tr>
+</table>
 <body>
 	<h1>Cartography Downloads</h1>
 		<a href="http://www.turtlebyturtle.com">Home</a><br>
