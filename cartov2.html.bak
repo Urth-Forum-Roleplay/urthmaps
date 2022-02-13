@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <head>
 	<title>Cartography Downloads</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
 	<link rel="icon" href="favicon.ico">
 </head>
 <html style="font-family: Tahoma">
-	<h1>Cartography Downloads</h1>
 		<a href="http://www.turtlebyturtle.com">Home</a><br>
 		<a href="http://www.turtlebyturtle.com/cartodocs.html">Cartographer Documents</a>
+		<h1>Cartography Downloads</h1>
 <br></br>
 		The Cartography Department recommends the use of <a href="https://www.gimp.org/">GIMP</a> to edit XCF files and <a href="https://inkscape.org/">Inkscape</a> to edit SVG files.<br>
 		<i>PLEASE NOTE: Your browser may warn you when downloading files from this website. This is due to the low volume of downloads and should not be cause for concern.</i>
