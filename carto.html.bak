@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <head>
-	<title>Urth Cartography Hub</title>
-	<link rel="icon" href="favicon.ico">
-	<body style="margin:0;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
-	<p style="margin:8px 0px 0px 8px;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
-	<style>
-		a:link {color:#089fe1;background-color:transparent;text-decoration:none}
-		a:visited {color:#089fe1;background-color:transparent;text-decoration:none}
-		a:hover {color:#089fe1;background-color:transparent;text-decoration:underline}
-		a:active {color:#089fe1;background-color:transparent;text-decoration:none}
-		footer {margin:0;padding:10px 0px 10px 0px;text-align:left;background-color:#2f3136;color:white;position:absolute;bottom:0;width:100%;}
-	</style>
+	<!--SITE SETTINGS-->
+		<title>Urth Cartography Hub</title>
+		<link rel="icon" href="favicon.ico">
+	<!--STYLES-->
+		<body style="margin:0;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
+		<p style="margin:8px 0px 0px 8px;padding:0;background-color:#36393f;font-family:Tahoma;color:white"'</p>
+		<footer style="margin:0;padding:10px 0px 10px 0px;text-align:left;background-color:#2f3136;color:white;position:absolute;bottom:0;width:100%">
+		<style>
+			a:link {color:#089fe1;background-color:transparent;text-decoration:none}
+			a:visited {color:#089fe1;background-color:transparent;text-decoration:none}
+			a:hover {color:#089fe1;background-color:transparent;text-decoration:underline}
+			a:active {color:#089fe1;background-color:transparent;text-decoration:none}
+		</style>
 	<!--MENU-->
-	<a href="http://www.turtlebyturtle.com/carto.html"><b>Urth Cartography</b></a><br>
-		⤷<a href="http://www.turtlebyturtle.com/cartodownloads.html">Downloads</a><br>
-		⤷<a href="http://www.turtlebyturtle.com/cartodocs.html">Documents</a>
+		<a href="http://www.turtlebyturtle.com/carto.html"><b>Urth Cartography</b></a><br>
+			⤷<a href="http://www.turtlebyturtle.com/cartodownloads.html">Downloads</a><br>
+			⤷<a href="http://www.turtlebyturtle.com/cartodocs.html">Documents</a>
 </head>
 <p>
 		<h1>Urth Cartography Hub</h1>
 		Welcome to the Urth Cartography website!<br>
 </p>
 <footer>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
 </footer>
