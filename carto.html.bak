@@ -2,9 +2,8 @@
 <head>
 	<title>Cartography Downloads</title>
 	<link rel="icon" href="favicon.ico">
-	<body style="background-color:36393f;font-family: Tahoma;colour:white">
 </head>
-<html>
+<html style="font-family: Tahoma">
 		<a href="http://www.turtlebyturtle.com">Home</a><br>
 		Urth Cartography<br>
 		⤷<a href="http://www.turtlebyturtle.com/carto.html">Downloads</a><br>
