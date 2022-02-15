@@ -3,6 +3,7 @@
 	<title>Urth Cartography Hub</title>
 	<link rel="icon" href="favicon.ico">
 	<body style="margin:0;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
+	<p style="margin:8px 0px 0px 0px;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
 	<style>
 		a:link {color:#089fe1;background-color:transparent;text-decoration:none}
 		a:visited {color:#089fe1;background-color:transparent;text-decoration:none}
@@ -16,10 +17,10 @@
 		⤷<a href="http://www.turtlebyturtle.com/cartodocs.html">Documents</a>
 </head>
 <html>
-<body style="margin:8px 0px 0px 0px">
+<p>
 		<h1>Urth Cartography Hub</h1>
 		Welcome to the Urth Cartography website!<br>
-</body>
+</p>
 </html>
 <footer>
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
