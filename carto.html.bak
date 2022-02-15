@@ -2,7 +2,7 @@
 <head>
 	<title>Urth Cartography Hub</title>
 	<link rel="icon" href="favicon.ico">
-	<body style="background-color:#36393f;font-family:Tahoma;color:white">
+	<body style="margin:0;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
 	<style>
 		a:link {color:#089fe1;background-color:transparent;text-decoration:none}
 		a:visited {color:#089fe1;background-color:transparent;text-decoration:none}
@@ -15,7 +15,7 @@
 		⤷<a href="http://www.turtlebyturtle.com/cartodownloads.html">Downloads</a><br>
 		⤷<a href="http://www.turtlebyturtle.com/cartodocs.html">Documents</a>
 </head>
-<html>
+<html style="margin:8px;padding:0;>
 		<h1>Urth Cartography Hub</h1>
 		Welcome to the Urth Cartography website!<br>
 </html>
