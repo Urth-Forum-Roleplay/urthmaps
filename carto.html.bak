@@ -3,7 +3,7 @@
 	<title>Urth Cartography Hub</title>
 	<link rel="icon" href="favicon.ico">
 	<body style="margin:0;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
-	<p style="margin:8px 8px 0px 0px;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
+	<p style="margin:8px 0px 0px 8px;padding:0;background-color:#36393f;font-family:Tahoma;color:white">
 	<style>
 		a:link {color:#089fe1;background-color:transparent;text-decoration:none}
 		a:visited {color:#089fe1;background-color:transparent;text-decoration:none}
