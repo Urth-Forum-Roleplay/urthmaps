@@ -1,20 +1,21 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible">
 /*BODY*/
 body {
 	margin:0;
 	padding:0;
 	background-color:#36393f;
-	font-family:Tahoma;
+	font-family:"Atkinson Hyperlegible", Tahoma, sans-serif;
 	color:white;
 }
 p {
-	margin:8px 0px 0px 8px;
+	margin:8px 2px 2px 8px;
 }
 /*TITLES*/
 h1 {
-	margin:8px 0px 0px 8px;
+	margin:8px 2px 2px 8px;
 }
 h2 {
-	margin:8px 0px 0px 8px;
+	margin:8px 2px 2px 8px;
 }
 /*LINKS*/
 a:link {
