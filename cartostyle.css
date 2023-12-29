@@ -14,4 +14,9 @@ h1 {
 h2 {
 	margin:8px 0px 0px 8px;
 }
-	
+a {
+	link {color:#089fe1;background-color:transparent;text-decoration:none}
+	visited {color:#089fe1;background-color:transparent;text-decoration:none}
+	hover {color:#089fe1;background-color:transparent;text-decoration:underline}
+	active {color:#089fe1;background-color:transparent;text-decoration:none}	
+}
