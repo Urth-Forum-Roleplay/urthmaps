@@ -44,7 +44,7 @@ footer {
 	text-align:left;
 	background-color:#2f3136;
 	color:#75797e;
-	position:static;
+	position:fixed;
 	bottom:0;
 	width:100%;
 }
