@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
 /*BODY*/
 body {
 	margin:0;
@@ -7,6 +9,8 @@ body {
 	font-family:"Atkinson Hyperlegible", Tahoma, sans-serif;
 	color:white;
 }
+</style>
+</head>
 p {
 	margin:8px 2px 2px 8px;
 }
