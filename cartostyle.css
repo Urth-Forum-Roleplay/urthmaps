@@ -1,16 +1,13 @@
-<head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-<style>
+/*FONT*/
+@import url('https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible');
 /*BODY*/
 body {
 	margin:0;
 	padding:0;
 	background-color:#36393f;
-	font-family:"Atkinson Hyperlegible", Tahoma, sans-serif;
+	font-family:Atkinson Hyperlegible, Tahoma, sans-serif;
 	color:white;
 }
-</style>
-</head>
 p {
 	margin:8px 2px 2px 8px;
 }
