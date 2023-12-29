@@ -9,14 +9,14 @@ body {
 	color:white;
 }
 p {
-	margin:8px 2px 2px 8px;
+	margin:15px 2px 0px 8px;
 }
 /*TITLES*/
 h1 {
-	margin:8px 2px 2px 8px;
+	margin:8px 2px 0px 8px;
 }
 h2 {
-	margin:15px 2px 2px 8px;
+	margin:15px 2px 0px 8px;
 }
 /*LINKS*/
 a:link {
