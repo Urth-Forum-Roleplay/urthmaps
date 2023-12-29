@@ -68,7 +68,63 @@
 <!---->
 <h2>Map Colours</h2>
 <p>	
-	WIP
+	<table>
+	<thead>
+	<tr>
+		<th>Colour</th>
+		<th>Hex Code</th>
+		<th>Notes</th>		
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Purple</td>
+		<td>766185</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Blue</td>
+		<td>425692</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Red</td>
+		<td>b93f31</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Green</td>
+		<td>298931</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Yellow</td>
+		<td>d9ab21</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Grey</td>
+		<td>7f7f7f</td>
+		<td>Use only for contested territories</td>
+	</tr>	
+	</tbody>
+	</table>
+</p>
+<!---->
+<h2>Procedure for Making the "HRUM_without_names" Map</h2>
+<p>	
+	<ol>
+		<li>Hide legend, update info, all labels</li>
+		<li>Duplicate Main Political Layer and verify that the alpha-channel is locked</li>
+		<li>Color-select the black borders, go to Select > Grow in the top bar and grow the border by 1 pixel</li>
+		<li>Set the Fill tool to Fill whole selection and fill the entire selection with black</li>
+		<li>Unlock alpha channel, Ctrl-I to invert the selection, and delete the part of the layer outside the border</li>
+		<li>Set opacity of this border layer to 40%</li>
+		<li>Recolor the original Main Political Layer countries and disputed territories and the Ocean layer according to the colors on the current HRUM_without_names.png</li>
+		<li>Merge all visible layers together</li>
+		<li>Use the scale tool, with interpolation set to Cubic, to scale the image to 4269x2860</li>
+		<li>Export</li>
+	</ol>
 </p>
 <!--FOOTER-->
 <footer>
