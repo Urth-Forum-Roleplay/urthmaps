@@ -48,3 +48,17 @@ footer {
 	bottom:0;
 	width:100%;
 }
+/*TABLES*/	
+table {
+	border: 1px solid;
+	border-color: white;
+	border-collapse:collapse;
+	margin:8px 0px 0px 8px;
+	width:50%;	
+}
+th,td {
+	border:1px solid;
+	border-color:white;
+	border-collapse:collapse;
+	padding:5px;
+}
