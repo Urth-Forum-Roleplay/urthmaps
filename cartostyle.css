@@ -36,4 +36,15 @@ a:active {
 	color:#089fe1;
 	background-color:transparent;
 	text-decoration:none;
-	}	
+	}
+/*FOOTERS*/	
+footer {
+	margin:0;
+	padding:8px 0px 8px 0px;
+	text-align:left;
+	background-color:#2f3136;
+	color:#75797e;
+	position:static;
+	bottom:0;
+	width:100%;
+}
