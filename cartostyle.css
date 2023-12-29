@@ -1,3 +1,4 @@
+/*BODY*/
 body {
 	margin:0;
 	padding:0;
@@ -8,28 +9,30 @@ body {
 p {
 	margin:8px 0px 0px 8px;
 }
+/*TITLES*/
 h1 {
 	margin:8px 0px 0px 8px;
 }
 h2 {
 	margin:8px 0px 0px 8px;
 }
-link {
+/*LINKS*/
+a:link {
 	color:#089fe1;
 	background-color:transparent;
 	text-decoration:none;
 }
-visited {
+a:visited {
 	color:#089fe1;
 	background-color:transparent;
 	text-decoration:none;
 	}
-hover {
+a:hover {
 	color:#089fe1;
 	background-color:transparent;
 	text-decoration:underline;
 	}
-active {
+a:active {
 	color:#089fe1;
 	background-color:transparent;
 	text-decoration:none;
