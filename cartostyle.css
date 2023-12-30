@@ -1,5 +1,17 @@
 /*FONT*/
 @import url('https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible');
+/*HEADER*/
+header {
+	margin-left:8;
+	padding:8px 0px 8px 0px;
+	text-align:left;
+	background-color:#2f3136;
+	color:#75797e;
+	position:relative;
+	bottom:0;
+	width:100%;	
+	font-size:20px;
+}
 /*BODY*/
 body {
 	margin:0;
@@ -63,4 +75,9 @@ th,td {
 	border-color:white;
 	border-collapse:collapse;
 	padding:5px;
+}
+/*MISC*/
+.flex-container {
+  display: flex;
+  flex-direction: row;
 }
