@@ -19,6 +19,9 @@ body {
 	background-color:#36393f;
 	font-family:Atkinson Hyperlegible, Tahoma, sans-serif;
 	color:white;
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
 }
 p {
 	margin:15px 2px 0px 8px;
@@ -52,13 +55,13 @@ a:active {
 	text-decoration:none;
 	}
 /*FOOTERS*/	
-footer {
-	margin:0;
+.footer {
+	margin-top:auto;
 	padding:8px 0px 8px 0px;
 	text-align:left;
 	background-color:#2f3136;
 	color:#75797e;
-	position:relative;
+	left:0;
 	bottom:0;
 	width:100%;
 }
