@@ -57,13 +57,15 @@ a:active {
 /*FOOTERS*/	
 .footer {
 	margin-top:auto;
-	padding:8px 0px 8px 0px;
+	padding:8px 0px 4px 0px;
 	text-align:left;
 	background-color:#2f3136;
 	color:#75797e;
 	left:0;
 	bottom:0;
 	width:100%;
+	display: flex;
+	flex-direction: row;
 }
 /*TABLES*/	
 table {
