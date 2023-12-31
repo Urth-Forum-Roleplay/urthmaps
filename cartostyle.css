@@ -63,9 +63,27 @@ a:active {
 	color:#75797e;
 	left:0;
 	bottom:0;
+	flex-direction: column;
+}
+.footer-upper {
 	width:100%;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	gap:0px 150px;
+	padding:20px 0px 20px 0px;
+}
+.footer-lower {
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	gap:0px 5px;
+	padding:10px 0px 10px 0px;
+}
+.footer-list {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 /*TABLES*/	
 table {
