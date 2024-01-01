@@ -23,15 +23,23 @@ body {
 	display:flex;
 	flex-direction:column;
 }
+.bodymain {
+	padding:5px 10% 20px 10%;
+}
+.bodyvertical {
+	display:flex;
+	flex-direction:column;
+}
+.bodyhorizontal {
+	display:flex;
+	flex-direction:horizontal;
+}
 p {
-	margin:15px 2px 0px 8px;
 }
 /*TITLES*/
 h1 {
-	margin:8px 2px 0px 8px;
 }
 h2 {
-	margin:15px 2px 0px 8px;
 }
 /*LINKS*/
 a:link {
