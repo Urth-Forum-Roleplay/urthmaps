@@ -2,6 +2,7 @@
 <!--PAGE SETTINGS-->
 <head>	
 	<link rel="stylesheet" href="cartostyle.css">
+	<script src="main.js" type="text/javascript"></script>
 	<title>Documentation</title>
 	<link rel="icon" href="favicon.ico">
 </head>
@@ -28,6 +29,53 @@
 		<li>A pixel on the map is equivalent to <b>6.34126 km²</b> (exactly 50 ÷ 2.808²)</li>
 		<li>The side of a pixel on the map is <b>2.518 km</b> long (exactly √<span style="text-decoration:overline;">50</span> ÷ 2.808)</li>
 	</ul>
+</p>
+<!---->
+<h2>Converters</h2>
+<p>
+<b>Area Converter</b>
+<table style="width:30%">
+	<thead>
+	<tr>
+		<th style="width:50%">Input</th>
+		<th style="width:50%">Output</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><input id="inputPixels" type="number" placeholder="pixels" min="0"> px</td>
+		<td><span id="outputSQKM">0</span> km²</td>
+	</tr>
+	<tr>
+		<td><button onclick="areaCalculator()">Convert</button> <button onclick="clearArea()">Clear</button></td>
+		<td><span id="outputSQMI">0</span> mi²</td>
+	</tr>
+	</tbody>
+</table>
+</p>
+<p>
+<b>Length Converter</b>
+<table style="width:30%">
+	<thead>
+	<tr>
+		<th style="width:50%">Input</th>
+		<th style="width:50%">Output</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><input id="inputLength" type="number" placeholder="pixels" min="0"> px</td>
+		<td><span id="outputKM">0</span> km</td>
+	</tr>
+	<tr>
+		<td><button onclick="lengthCalculator()">Convert</button> <button onclick="clearLength()">Clear</button></td>
+		<td><span id="outputMI">0</span> mi</td>
+	</tr>
+	</tbody>
+</table>
+</p>
+<p>
+<i>Should only be used for straight lines. Use the Pythagorean theorem (a² + b² = c²) for diagonals.</i>
 </p>
 <!---->
 <h2>Fonts</h2>
@@ -116,6 +164,9 @@
 	</tbody>
 	</table>
 </p>
+<!---->
+<h2>Layers</h2>
+WIP
 <!---->
 <h2>Procedure for Making the "HRUM_without_names" Map</h2>
 <p>	
