@@ -6,8 +6,8 @@ on:
 
 jobs:
   add-issue:
-    if: contains(github.event.issue.labels.*.name, 'New_Claim')
     runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'New_Claim')
     steps:
     - uses: actions/checkout@v2
     - name: Add Issue
