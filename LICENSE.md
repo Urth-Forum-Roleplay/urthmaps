@@ -1,4 +1,4 @@
-Any documentation, maps, and images, as well as any text on the website are released under CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Any documentation, maps, and images in this repository, as well as any text on the website are released under CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).
 Website code (excluding any text content within those files) is released under a GNU AGPLv3 license (https://www.gnu.org/licenses/agpl-3.0.en.html).
 
 The full text of both licenses is below.
