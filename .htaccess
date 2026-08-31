@@ -1,6 +1,9 @@
 RewriteEngine On
 # Deprecated link redirection
-Redirect 301 "/test.html" "/index.html"
+Redirect 301 /test.html https://urthmaps.com/
+Redirect 301 /test https://urthmaps.com/
+Redirect 301 https://urthmaps.com/test.html https://urthmaps.com/
+Redirect 301 https://urthmaps.com/test https://urthmaps.com/
 
 # Replace html file extension https://example.com/page.html with https://example.com/page
 RewriteCond %{REQUEST_FILENAME} !-d
