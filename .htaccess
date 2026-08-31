@@ -6,5 +6,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC, L]
 
 # Testing redirect
-Redirect 301 /test.html /index.html
-Redirect 301 /test.png /test2.png
+RewriteRule ^/test\.html$ /index.html [R=301,L]
