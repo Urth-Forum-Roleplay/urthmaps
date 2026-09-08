@@ -1,220 +1,181 @@
 <!DOCTYPE html>
-<!--PAGE SETTINGS-->
-<head>	
-	<link rel="stylesheet" href="cartostyle.css">
-	<script src="main.js" type="text/javascript"></script>
-	<title>Documentation</title>
-	<link rel="icon" href="favicon.ico">
-</head>
-<!--HEADER-->
-<header>
-	<div class="flex-container">
-		<div><a href="https://www.urthmaps.com/"><div style="padding-left:8px"><img src="../logo.png" style="width:80px;height:80px;"></div></a></div>
-		<div style="padding:27px 0px 0px 50px"><a href="https://www.urthmaps.com/downloads">Downloads</a></div>
-		<div style="padding:27px 0px 0px 50px"><a href="https://www.urthmaps.com/docs">Documentation</a></div>
-		<div style="padding:27px 0px 0px 50px"><a href="https://www.urthmaps.com/archives">Archives</a></div>
-		<div style="padding:27px 0px 0px 50px"><a href="https://www.urthmaps.com/team">Team</a></div>
-		<div style="padding:27px 0px 0px 50px"><a href="https://www.urthmaps.com/about">About</a></div>
-	</div>
-</header>
-<!--TITLE-->
-<div class=bodymain>
-<h1>Documentation</h1>
-<!--BODY-->
-<h2>Map Measurements</h2>
-<p>	
-	The easiest way to measure area is to use the Fuzzy Select tool in GIMP in combination with the Histogram window (Windows>Dockable Dialogues>Histogram). The window displays the number of selected pixels at the bottom, which can then be multiplied by one of the area values below. This process should be done on the political map XCF file and not a PNG.
-	<br />
-	<ul>
-		<li>A pixel on the map is equivalent to <b>6.34126 km²</b> (exactly 50 ÷ 2.808²)</li>
-		<li>The side of a pixel on the map is <b>2.518 km</b> long (exactly √<span style="text-decoration:overline;">50</span> ÷ 2.808)</li>
-	</ul>
-</p>
-<!---->
-<h2>Converters</h2>
-<p>
-<b>Area Converter</b>
-<table style="width:30%">
-	<thead>
-	<tr>
-		<th style="width:50%">Input</th>
-		<th style="width:50%">Output</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td><input id="inputPixels" type="number" placeholder="pixels" min="0"> px</td>
-		<td><span id="outputSQKM">0</span> km²</td>
-	</tr>
-	<tr>
-		<td><button onclick="areaCalculator()">Convert</button> <button onclick="clearArea()">Clear</button></td>
-		<td><span id="outputSQMI">0</span> mi²</td>
-	</tr>
-	</tbody>
-</table>
-</p>
-<p>
-<b>Length Converter</b>
-<table style="width:30%">
-	<thead>
-	<tr>
-		<th style="width:50%">Input</th>
-		<th style="width:50%">Output</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td><input id="inputLength" type="number" placeholder="pixels" min="0"> px</td>
-		<td><span id="outputKM">0</span> km</td>
-	</tr>
-	<tr>
-		<td><button onclick="lengthCalculator()">Convert</button> <button onclick="clearLength()">Clear</button></td>
-		<td><span id="outputMI">0</span> mi</td>
-	</tr>
-	</tbody>
-</table>
-</p>
-<p>
-<i>Should only be used for straight lines. Use the Pythagorean theorem (a² + b² = c²) for diagonals.</i>
-</p>
-<!---->
-<h2>Fonts</h2>
-<p>	
-	Anti-aliasing should always be disabled, and all text should be in black.
-	<br />
-	<table>
-	<thead>
-	<tr>
-		<th>Usage</th>
-		<th>Font</th>
-		<th>Size</th>
-		<th>Notes</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>City</td>
-		<td>Franklin Gothic Book</td>
-		<td>10</td>
-		<td>May require some touch ups</td>
-	</tr>
-	<tr>
-		<td>Capital</td>
-		<td>Sans Serif*</td>
-		<td>20</td>
-		<td>Underlined</td>
-	</tr>
-	<tr>
-		<td>Nation</td>
-		<td>Bell MT Bold</td>
-		<td>35-75</td>
-		<td>Size jumps of +10 only</td>
-	</tr>
-	<tr>
-		<td>Territory</td>
-		<td>Bell MT Bold</td>
-		<td>25</td>
-		<td>Italicized</td>
-	</tr>
-	</tbody>
-	</table>
-	</br>
-	*The Sans Serif we use is more specifically known as "MS Reference Sans Serif" and appears as "REFSAN" in the Windows fonts folder.
-</p>
-<!---->
-<h2>Map Colours</h2>
-<p>	
-	<table>
-	<thead>
-	<tr>
-		<th>Colour</th>
-		<th>Hex Code</th>
-		<th>Notes</th>		
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>Purple</td>
-		<td>766185</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Blue</td>
-		<td>425692</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Red</td>
-		<td>b93f31</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Green</td>
-		<td>298931</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Yellow</td>
-		<td>d9ab21</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Grey</td>
-		<td>7f7f7f</td>
-		<td>Use only for contested territories</td>
-	</tr>	
-	</tbody>
-	</table>
-</p>
-<!---->
-<h2>Layers</h2>
-WIP
-<!---->
-<h2>Procedure for Making the "HRUM_without_names" Map</h2>
-<p>	
-	<ol>
-		<li>Hide legend, update info, all labels</li>
-		<li>Duplicate Main Political Layer and verify that the alpha-channel is locked</li>
-		<li>Color-select the black borders, go to Select > Grow in the top bar and grow the border by 1 pixel</li>
-		<li>Set the Fill tool to Fill whole selection and fill the entire selection with black</li>
-		<li>Unlock alpha channel, Ctrl-I to invert the selection, and delete the part of the layer outside the border</li>
-		<li>Set opacity of this border layer to 40%</li>
-		<li>Recolor the original Main Political Layer countries and disputed territories and the Ocean layer according to the colors on the current HRUM_without_names.png</li>
-		<li>Merge all visible layers together</li>
-		<li>Use the scale tool, with interpolation set to Cubic, to scale the image to 4269x2860</li>
-		<li>Export</li>
-	</ol>
-</p>
-</div>
-<!--FOOTER-->
-<div class=footer>
-	<div class=footer-upper>
-		<div class=footer-list style="padding-right:15%">
-			<div><b>HEADQUARTERS</b></div>
-			<div>2016 Cylinder Way, Rilanon</div>
-			<div>Christie Island, 7UR 7L3</div>
-			<div><a href="mailto:info@urthmaps.com">info@urthmaps.com</a></div>
-			<div>+0 222 627 7527</div>
-		</div>
-		<div class=footer-list>
-			<div><b>CARTOGRAPHY</b></div>
-			<div><a href="https://www.urthmaps.com/downloads">Downloads</a></div>
-			<div><a href="https://www.urthmaps.com/docs">Documentation</a></div>
-			<div><a href="https://www.urthmaps.com/archives">Archives</a></div>
-			<div><a href="https://www.urthmaps.com/team">Team</a></div>
-			<div><a href="https://www.urthmaps.com/about">About</a></div>
-		</div>
-		<div class=footer-list>
-			<div><b>COMMUNITY</b></div>
-			<div><a href="https://tep.wiki/" target="_blank" rel="noopener noreferrer">Wiki</a></div>
-			<div><a href="https://forum.theeastpacific.com/c/nation-creation-starts-here/" target="_blank" rel="noopener noreferrer">Nation Creation</a></div>
-			<div><a href="https://forum.theeastpacific.com/t/map-changes/" target="_blank" rel="noopener noreferrer">Map Changes</a></div>
-			<div><a href="https://github.com/Urth-Forum-Roleplay/urthmaps" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-		</div>
-	</div>
-	<hr style="width:99%;color:#50535c" />
-	<div class=footer-lower>
-		<div style="padding-left:8px;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a></div> 
-		<div style="padding:5px 0px 0px 8px;"><small>Maps and documents are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</small></div>
-	</div>
-</div>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.jade.min.css">
+        <script src="../site/main.js" type="text/javascript"></script>
+        <meta name="description" content="Documentation pertaining to Urth maps, provided by the Urth Cartography Department.">        
+        <title>urthmaps - docs</title>
+        <link rel="icon" href="../site/favicon.ico">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <!--Change for local logo path before publishing-->
+                    <li><a href="https://www.urthmaps.com/"><img src="../site/logo.png" style="width:80px;height:80px;"></a><strong>   urthmaps</strong></li>
+                </ul>
+                <ul>
+                    <li><a href="https://urthmaps.com/maps">maps</a></li>
+                    <li><a href="https://urthmaps.com/docs">docs</a></li>
+                    <li><a href="https://urthmaps.com/about">about</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <p>On this page, you'll find important information about Urth's maps, how they're made, and some helpful tools.</p>
+
+            <h3>Measurements</h3>
+            <p>The easiest way to measure area is to use GIMP's Fuzzy Select tool in combination with the Histogram window (Windows > Dockable Dialogues > Histogram). The window displays the number of selected pixels at the bottom.</p>
+            <ul>
+                <li>A pixel on the map is equivalent to <strong>6.34126 km²</strong> (exactly 50 ÷ 2.808²)</li>
+                <li>The side of a pixel on the map is <strong>2.518 km</strong> long (exactly √50 ÷ 2.808)</li>
+            </ul>
+
+            <h4>Conversion</h4>
+            <p>You can use these tools to quickly convert between pixels and regular units.</p>
+
+            <h5>Area</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input id="inputPixels" type="number" placeholder="pixels" min="0"> px</td>
+                        <td><span id="outputSQKM">0</span> km²</td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="areaCalculator()">Convert</button> <button onclick="clearArea()">Clear</button></td>
+                        <td><span id="outputSQMI">0</span> mi²</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5>Length</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input id="inputLength" type="number" placeholder="pixels" min="0"> px</td>
+                        <td><span id="outputKM">0</span> km</td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="lengthCalculator()">Convert</button> <button onclick="clearLength()">Clear</button></td>
+                        <td><span id="outputMI">0</span> mi</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Standards</h3>
+            <p>These are standards we use to make the political map.</p>
+
+            <h4>Fonts</h4>
+            <p>For all fonts, anti-aliasing should be disabled. Text is always in black.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Usage</th>
+                        <th scope="col">Font</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">City</th>
+                        <td>Franklin Gothic Book</td>
+                        <td>10</td>
+                        <td>Requires some manual touch-ups</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Capital</th>
+                        <td>Sans Serif*</td>
+                        <td>20</td>
+                        <td>Underlined</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nation</th>
+                        <td>Bell MT Bold</td>
+                        <td>35-75</td>
+                        <td>Sizes by increments of 10 only</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Territory</th>
+                        <td>Bell MT Bold</td>
+                        <td>25</td>
+                        <td>Italicized</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><small>*The Sans Serif we use is more specifically known as "MS Reference Sans Serif" and appears as "REFSAN" in the Windows fonts folder.</small></p>
+
+            <h4>Colours</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Colour</th>
+                        <th scope="col">Hex Code</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Purple</th>
+                        <td>766185</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Blue</th>
+                        <td>425692</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Red</th>
+                        <td>b93f31</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Green</th>
+                        <td>298931</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Yellow</th>
+                        <td>d9ab21</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Grey</th>
+                        <td>7f7f7f</td>
+                        <td>Only used for contested territories</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Layers</h4>
+            <p>WIP</p>
+
+        </main>
+        
+        <footer>
+            <hr />
+            <p><small><em>Maps and documentation are covered by the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Website code is released under the MIT License.</em></small></p>
+            <p><small><a href="https://github.com/Urth-Forum-Roleplay/urthmaps">View on Github</a></small></p>
+        </footer>
+    </body>
+
+</html>
+
