@@ -39,7 +39,13 @@
             <p>You can use these tools to quickly convert between pixels and regular units.</p>
 
             <h5>Area</h5>
-            <table>
+            <fieldset role="group">
+                <input id="inputPixels" type="number" placeholder="pixels">
+                <input onclick="areaCalculator()" type="submit" value="Convert">
+            </fieldset>
+            <p><span id="outputPX">0</span> px is equivalent to <span id="outputSQKM">0</span> km² (or <span id="outputSQMI">0</span> mi²).</p>
+
+            <!--<table>
                 <thead>
                     <tr>
                         <th>Input</th>
@@ -56,7 +62,7 @@
                         <td><span id="outputSQMI">0</span> mi²</td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
 
             <h5>Length</h5>
             <table>

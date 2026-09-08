@@ -13,7 +13,11 @@ function areaCalculator() {
 	var resultSQKM = inputValue * (50 / (2.808 * 2.808));
 	var resultSQMI = resultSQKM / 2.59;
 
-	// Display the result in sqkm
+	// Display the input
+        var outputPX = document.getElementById('outputPX');
+        outputPX.textContent = inputValue;
+
+        // Display the result in sqkm
 	var outputSQKM = document.getElementById('outputSQKM');
 	outputSQKM.textContent = resultSQKM.toFixed(2); // Display result with 2 decimal places
 	
