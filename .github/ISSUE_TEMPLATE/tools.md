@@ -2,7 +2,7 @@
 name: Tools
 about: For things relating to tools such as scripts.
 title: "[Tool] Title (e.g. [Automapper] Issue with xyz)"
-labels: Meta
+labels: Tools
 assignees: turtlebyturtle
 
 ---
