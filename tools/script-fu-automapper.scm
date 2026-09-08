@@ -14,7 +14,7 @@
     ""                                           ; image type that the script works on
     SF-OPTION "OS" '("Linux" "MacOS" "Windows")  ; dropdown, which OS is being used
     SF-DIRNAME "Local repository root" ""        ; working directory, should be urthmaps repo root
-    SF-TOGGLE "Enable debugging?" #t             ; checkbox, enables debug output
+    SF-TOGGLE "Enable debugging?" #f             ; checkbox, enables debug output
     SF-TOGGLE "Ready to start?" #f               ; checkbox, confirms that user is ready
 )
 
