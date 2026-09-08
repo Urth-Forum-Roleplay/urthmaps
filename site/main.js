@@ -26,7 +26,7 @@ function areaCalculator() {
 	outputSQMI.textContent = resultSQMI.toFixed(2);
 }
 
-function clearArea() {
+function clearArea() { // Unused as of 2026-09-08
 	//Reset input box
 	document.getElementById('inputPixels').value = '';
 	
@@ -52,6 +52,10 @@ function lengthCalculator() {
 	var resultKM = inputValue * (Math.sqrt(50) / 2.808);
 	var resultMI = resultKM / 1.609;
 
+	// Display the input
+        var outputLG = document.getElementById('outputLG');
+        outputLG.textContent = inputValue;
+
 	// Display the result in km
 	var outputKM = document.getElementById('outputKM');
 	outputKM.textContent = resultKM.toFixed(2); // Display result with 2 decimal places
@@ -61,7 +65,7 @@ function lengthCalculator() {
 	outputMI.textContent = resultMI.toFixed(2);
 }
 
-function clearLength() {
+function clearLength() { // Unused as of 2026-09-08
 	//Reset input box
 	document.getElementById('inputLength').value = '';
 	
