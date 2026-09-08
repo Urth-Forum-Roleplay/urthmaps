@@ -32,7 +32,7 @@
 ;; Order of variables depends on order in script-fu-register function
 (define (script-fu-automapper option_os dir_working toggle_debug? toggle_ready?)
 
-    (msg 1 "Starting script...")
+    (msg 1 "Starting Automapper (v1.0)...")
 
     ; DEBUG: Enables output to error console if checked
     (cond ((= 1 toggle_debug?) ; Toggle debug enabled

@@ -27,7 +27,7 @@
 
         <main>
             <p>On this page, you'll find important information about Urth's maps, how they're made, and some helpful tools.</p>
-            <details>
+            <details open>
                 <summary>Table of Contents</summary>
                 <ul>
                     <li><a href="#measurements">Measurements</a></li>
@@ -43,6 +43,15 @@
                         <li><a href="#fonts">Fonts</a></li>
                         <li><a href="#colours">Colours</a></li>
                         <li><a href="#layers">Layers</a></li>
+                    </ul>
+                    <li><a href="#tools">Tools</a></li>
+                    <ul>
+                        <li><a href="#automapper">Automapper</a></li>
+                        <ul>
+                            <li><a href="#automapper-installation">Installation</a></li>
+                            <li><a href="#automapper-usage">Usage</a></li>
+                            <li><a href="#automapper-troubleshooting">Troubleshooting</a></li>
+                        </ul>
                     </ul>
                 </ul>
             </details>
@@ -255,6 +264,37 @@
                     </tr>
                 </tbody>
             </table>
+
+            <h3 id="tools">Tools</h3>
+            <h4 id="automapper">Automapper</h4>
+            <p><strong>Automapper</strong> (<kbd>script-fu-automapper.scm</kbd>) is a GIMP Script-Fu script written in <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a> which automates the creation and export of most supplemental maps.</p>
+            <p>The script currently updates <kbd>blank</kbd>, <kbd>hydro</kbd> (swaps base), <kbd>interactive</kbd>, <kbd>locator-global</kbd>, <kbd>locator-local</kbd>, and <kbd>timezones</kbd> (swaps base).</p>
+
+            <h5 id="automapper-installation">Installation</h5>
+            <p>The script can be found <a href="../tools/script-fu-automapper.scm">here</a>. It should be placed in your GIMP scripts directory, the location of which can be found under Edit > Preferences > Folders > Scripts. If GIMP is open when you install or update the script, you will need to close and reopen the app for the change to take effect.</p>
+
+            <h5 id="automapper-usage">Usage</h5>
+            <p>Before starting the script for the first time, you should dock the Error console somewhere (Windows > Dockable Dialogues > Error Console) and keep it open. Any messages the script generates will appear there. Once you have that set up, you can start the script under Image > Urth > Automapper. This will open a small window (do not start the script yet).</p>
+            <p>In the window, you'll have to select:</p>
+            <ul>
+                <li><strong>OS</strong>: The operating system you're using.</li>
+                <li><strong>Local repository root</strong>: The directory (folder) where you keep the local copy of the urthmaps repository (<kbd>404.html</kbd> is in there).</li>
+                <li><strong>Enable debugging?</strong>: Whether or not to enable debugging. You should keep this disabled, this function is only used to troubleshoot issues and also increases how long the script takes to run.</li>
+                <li><strong>Ready to start?</strong>: Checks that you're ready to start so that you don't impulsively or accidentally start the script.</li>
+            </ul>
+            <p>To run the script, you should have <kbd>urth.xcf</kbd> open in GIMP and nothing else. Make sure to clean up any temporary layers you added while updating the map. If the script is stopping and you're not sure why (remember to read the error console messages), check the next section.</p>
+            <p>You can now start the script. The Automapper window will stay open during execution and close when it is done. To see what is going on, check the error console and look at the bottom of your screen.</p>
+
+            <h5 id="automapper-troubleshooting">Troubleshooting</h5>
+            <p>Below is a list of things the script checks for, in order. If the script encounters any of the conditions, it will stop executing.</p>
+            <ul>
+                <li>User has not checked the "Ready" checkbox</li>
+                <li>No images are open</li>
+                <li>More than one image is open</li>
+                <li>Open image has unsaved changes</li>
+                <li>Image is not 11232 x 7525 pixels (the size of urth.xcf)</li>
+                <li>Image does not have 6 layers (counting Labels but not its children)</li>
+            </ul>
 
         </main>
         
