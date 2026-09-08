@@ -1,0 +1,1 @@
+These thumbnails used on the maps page are created using the GIMP crop tool at position (4120, 1508) with size (2740, 1500). The crop for the interactive map (different scale) was approximated and the crop for the timezones map required some adjustment (wider than normal).
