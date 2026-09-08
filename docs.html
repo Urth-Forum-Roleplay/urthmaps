@@ -27,55 +27,53 @@
 
         <main>
             <p>On this page, you'll find important information about Urth's maps, how they're made, and some helpful tools.</p>
+            <details>
+                <summary>Table of Contents</summary>
+                <ul>
+                    <li><a href="measurements">Measurements</a></li>
+                    <ul>
+                        <li><a href="conversion">Conversion</a></li>
+                        <ul>
+                            <li><a href="area">Area</a></li>
+                            <li><a href="length">Length</a></li>
+                        </ul>
+                    </ul>
+                    <li><a href="standards">Standards</a></li>
+                    <ul>
+                        <li><a href="fonts">Fonts</a></li>
+                        <li><a href="colours">Colours</a></li>
+                        <li><a href="layers">Layers</a></li>
+                    </ul>
+                </ul>
 
-            <h3>Measurements</h3>
+            <h3 id="measurements">Measurements</h3>
             <p>The easiest way to measure area is to use GIMP's Fuzzy Select tool in combination with the Histogram window (Windows > Dockable Dialogues > Histogram). The window displays the number of selected pixels at the bottom.</p>
             <ul>
                 <li>A pixel on the map is equivalent to <strong>6.34126 km²</strong> (exactly 50 ÷ 2.808²)</li>
                 <li>The side of a pixel on the map is <strong>2.518 km</strong> long (exactly √50 ÷ 2.808)</li>
             </ul>
 
-            <h4>Conversion</h4>
+            <h4 id="conversion">Conversion</h4>
             <p>You can use these tools to quickly convert between pixels and regular units.</p>
 
-            <h5>Area</h5>
+            <h5 id="area">Area</h5>
             <fieldset role="group">
                 <input id="inputPixels" type="number" placeholder="pixels" min="0">
                 <input onclick="areaCalculator()" type="submit" value="Convert">
             </fieldset>
-            <p><strong><span id="outputPX">0</span> px</strong> is equivalent to <strong><span id="outputSQKM">0</span> km²</strong> (or <strong><span id="outputSQMI">0</span> mi²)</strong></p>
+            <p><strong><span id="outputPX">0</span> px</strong> is equivalent to <strong><span id="outputSQKM">0</span> km²</strong> (or <strong><span id="outputSQMI">0</span> mi²</strong>)</p>
 
-            <h5>Length</h5>
+            <h5 id="length">Length</h5>
             <fieldset role="group">
                 <input id="inputLength" type="number" placeholder="pixels" min="0">
                 <input onclick="lengthCalculator()" type="submit" value="Convert">
             </fieldset>
-            <p><strong><span id="outputLG">0</span> px</strong> is equivalent to <strong><span id="outputKM">0</span> km</strong> (or <strong><span id="outputMI">0</span> mi)</strong></p>
+            <p><strong><span id="outputLG">0</span> px</strong> is equivalent to <strong><span id="outputKM">0</span> km</strong> (or <strong><span id="outputMI">0</span> mi</strong>)</p>
 
-
-            <!--<table>
-                <thead>
-                    <tr>
-                        <th>Input</th>
-                        <th>Output</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input id="inputLength" type="number" placeholder="pixels" min="0"> px</td>
-                        <td><span id="outputKM">0</span> km</td>
-                    </tr>
-                    <tr>
-                        <td><button onclick="lengthCalculator()">Convert</button> <button onclick="clearLength()">Clear</button></td>
-                        <td><span id="outputMI">0</span> mi</td>
-                    </tr>
-                </tbody>
-            </table>-->
-
-            <h3>Standards</h3>
+            <h3 id="standards">Standards</h3>
             <p>These are standards we use to make the political map.</p>
 
-            <h4>Fonts</h4>
+            <h4 id="fonts">Fonts</h4>
             <p>For all fonts, anti-aliasing should be disabled. Text is always in black.</p>
             <table>
                 <thead>
@@ -115,7 +113,7 @@
             </table>
             <p><small>*The Sans Serif we use is more specifically known as "MS Reference Sans Serif" and appears as "REFSAN" in the Windows fonts folder.</small></p>
 
-            <h4>Colours</h4>
+            <h4 id="colours">Colours</h4>
             <table>
                 <thead>
                     <tr>
@@ -158,8 +156,104 @@
                 </tbody>
             </table>
 
-            <h4>Layers</h4>
-            <p>WIP</p>
+            <h4 id="layers">Layers</h4>
+            <p>This section indicates the purpose of each layer of the political map and the state of their locks. This locking arrangement is meant to be as unobtrusive as possible when editing the map. In the event lock states do need to be changed during an update, they should be restored as indicated below before pushing the changes.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Layer</th>
+                        <th scope="col">Opacity</th>
+                        <th scope="col">Content</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Visibility</th>
+                        <th scope="col">Alpha</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Update Notes</th>
+                        <td>100</td>
+                        <td></td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>Layer over the legend with the "last updated" text</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Legend</th>
+                        <td>100</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>The legend at the bottom left of the map</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Latitude/Longitude</th>
+                        <td>60</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td></td>
+                        <td>🔒</td>
+                        <td>The "grid" over the map</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Labels</th>
+                        <td>100</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Container for the next three layers</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">National</th>
+                        <td>100</td>
+                        <td></td>
+                        <td>🔒</td>
+                        <td></td>
+                        <td></td>
+                        <td>Nation and territory labels</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cities</th>
+                        <td>100</td>
+                        <td></td>
+                        <td>🔒</td>
+                        <td></td>
+                        <td></td>
+                        <td>City labels (including captials)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sub-National</th>
+                        <td>80</td>
+                        <td></td>
+                        <td>🔒</td>
+                        <td></td>
+                        <td></td>
+                        <td>Sub-national borders and labels</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Political</th>
+                        <td>100</td>
+                        <td></td>
+                        <td>🔒</td>
+                        <td></td>
+                        <td>🔒</td>
+                        <td>Coloured areas, white space, international borders</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ocean</th>
+                        <td>100</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>🔒</td>
+                        <td>Single-colour background layer</td>
+                    </tr>
+                </tbody>
+            </table>
 
         </main>
         
