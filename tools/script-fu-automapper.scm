@@ -278,7 +278,7 @@
     (define map_interactive_layer_base (car (gimp-image-get-layer-by-name map_interactive "Base"))) ; get base ID again because it changes when merged
     (define map_interactive_layer_latlong (car (gimp-edit-named-paste map_interactive_layer_base "buffer_latlong" 1))) ; paste from buffer_latlong and keep ID
     (gimp-floating-sel-to-layer map_interactive_layer_latlong) ; floating to layer
-    (gimp-resource-rename map_interactive_layer_latlong "Latitude/Longitude") ; rename layer
+    (gimp-item-set-name map_interactive_layer_latlong "Latitude/Longitude") ; rename layer
     (gimp-layer-set-opacity map_interactive_layer_latlong 60) ; set opacity to 60
 
     (msg 1 "Downscaling interactive map, this may take a few moments...")
