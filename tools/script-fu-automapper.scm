@@ -4,6 +4,10 @@
 ;; SF-TOGGLE actually returns 1 or 0 and not #t or #f
 ;; Script will quit if (in order checked): user not ready, no images open, more than one image open, unsaved changes, image dimensions wrong, layer count wrong
 
+;; CHANGELOG
+;; 1.0 - Release
+;; 1.1 - Added urth.png export and added lat/long layer to interactive
+
 (script-fu-register
     "script-fu-automapper"                       ; function name
     "Automapper"                                 ; menu label
@@ -32,7 +36,7 @@
 ;; Order of variables depends on order in script-fu-register function
 (define (script-fu-automapper option_os dir_working toggle_debug? toggle_ready?)
 
-    (msg 1 "Starting Automapper (v1.0)...")
+    (msg 1 "Starting Automapper (v1.1)...")
 
     ; DEBUG: Enables output to error console if checked
     (cond ((= 1 toggle_debug?) ; Toggle debug enabled
@@ -89,6 +93,9 @@
           (else ; passed checks
            (msg 1 "Image seems correct. Proceeding...")))
 
+    ; Export urth.png
+    (saver-png option_os map_urth dir_working "urth" toggle_debug?)
+    (msg 1 "Exported urth.png")
 
     ; MAP - WORKING (temp map from which others are made)
     (msg 1 "Preparing base and borders for supplemental maps...")
@@ -237,11 +244,13 @@
     (define map_interactive_layer_borders (car (gimp-image-get-layer-by-name map_interactive "Borders"))) ; find borders
     (define map_interactive_layer_base (car (gimp-image-get-layer-by-name map_interactive "Base"))) ; find base
     (define map_interactive_layer_ocean (car (gimp-image-get-layer-by-name map_interactive "Ocean"))) ; find ocean
+    (define map_urth_layer_latlong (car (gimp-image-get-layer-by-name map_urth "Latitude/Longitude"))) ; find latlong in urth
     (define map_urth_layer_political (car (gimp-image-get-layer-by-name map_urth "Political"))) ; find political in urth
 
     (gimp-image-undo-disable map_urth) ; disable undo tracking on urth
     (gimp-selection-all map_urth) ; select all on urth
     (gimp-edit-named-copy (vector map_urth_layer_political) "buffer_political") ; copy to buffer_political (function only accepts vectors)
+    (gimp-edit-named-copy (vector map_urth_layer_latlong) "buffer_latlong") ; copy to buffer_latlong
     (gimp-selection-none map_urth) ; deselect all on urth
     (gimp-image-undo-enable map_urth) ; reenable undo tracking on urth
     (gimp-image-clean-all map_urth) ; remove the dirty state from urth, since no changes were actually made
@@ -266,6 +275,12 @@
     (gimp-context-set-background '(176 197 213)) ; set background to light blue
     (gimp-drawable-fill map_interactive_layer_ocean 1) ; fill ocean with background
 
+    (define map_interactive_layer_base (car (gimp-image-get-layer-by-name map_interactive "Base"))) ; get base ID again because it changes when merged
+    (define map_interactive_layer_latlong (car (gimp-edit-named-paste map_interactive_layer_base "buffer_latlong" 1))) ; paste from buffer_latlong and keep ID
+    (gimp-floating-sel-to-layer map_interactive_layer_latlong) ; floating to layer
+    (gimp-resource-rename map_interactive_layer_latlong "Latitude/Longitude") ; rename layer
+    (gimp-layer-set-opacity map_interactive_layer_latlong 60) ; set opacity to 60
+
     (msg 1 "Downscaling interactive map, this may take a few moments...")
     (gimp-image-scale map_interactive 4269 2860) ; resize image before saving
 
@@ -278,6 +293,7 @@
            (gimp-image-delete map_interactive)))
 
     (gimp-buffer-delete "buffer_political") ; delete buffer
+    (gimp-buffer-delete "buffer_latlong") ; delete buffer
 
     (msg 1 "Interactive map generated.")
 
